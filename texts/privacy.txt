@@ -1,0 +1,12 @@
+<h3>Your privacy is critically important to us. And we have a few fundamental principles:</h3>
+<ol>
+<li><p>We don't ask you for personal information.</p></li>
+<li><p>We don't store any information.</p></li>
+<li><p>We don't share your information with anyone. Even we don't track you anyhow.</p></li>
+<li><p>We don't store personal information on our servers, because we do not have any such intention to spy you.</p></li>
+<li><p>We do not collect any information or track you in any manner. Feel free to browse our site.</p></li>
+<li><p>We only place few ads from third party services (to compensate our web hosting cost), they may collect your data, but we do not encourage it.</p></li>
+
+<p>
+Thanks.
+</p>
