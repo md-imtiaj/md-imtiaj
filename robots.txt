@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /
+
+User-agent: Bingbot
+Disallow: /*?q=*&search=1
+
+User-agent: Googlebot
+Disallow: /*?q=*&search=1
