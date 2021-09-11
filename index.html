@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,101 +32,90 @@
 		  --main-theme-color: #3B5998;		}
 	</style>
 	<link rel="stylesheet" href="//storage.googleapis.com/boysofts.appspot.com/file-search-engine/assets/css/styles.css">
-  </head>
-<body >
+  </head><body>
 <div id="page-container">
   <div id="content-wrap">
 	<header class="header">
-	  <a href="#" class="logo" id="logo">&#128640;<i>Search</i><sup style="font-size:15px;color:black;"><i>&#946;</i></sup></a>
+	  <a href="/" class="logo" id="logo" data-link>&#128640; search</a>
 	  <input class="menu-btn" type="checkbox" id="menu-btn" />
-	  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-	  
+	  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>	  
 	</header>
 <br/><br/>
-<div id="main">      
-    
-	<br/>
-	
-  <div class="inner center" id="search-form">  
-      <form action="" method="get" onsubmit="event.preventDefault();do_search()" class="card table-caption" style="width:750px;padding:10px;margin-bottom:15px;">
-		<div class="search">
-		<input type="search" class="searchTerm" placeholder="Search..." id="q" name="q" value="" pattern=".{3,}" required title="3 characters minimum">
-		<input type="hidden" value="1" name="search">
-		<button type="submit" class="searchButton" ></button>
-		</div>
-	  </form> 
-  </div>
-  
-  
-  
- <!--div class="inner center loader"> <br/><br/><br/><br/><br/><br/>      
-	  <b class="table-caption"> Searching for "dd"...</b>
- </div>
- 
- <div class="inner center loader">	  
-	    <div class="progressbar1">
-		  <div class="progressbarfill"></div>
-		</div>	  
- </div-->
- 
- 
- 
-  <div class="inner center" id="search_res_table" style="display:none;">
-    <table class="rtable">
-	  <caption class="table-caption">Search: "" [<span id="result-count"></span> Results]</caption>
-	  <thead>
-		<tr  >
-		  <th>File Name</th>		  
-		  <th>Size</td>
-		  <th>Category</th>
-		  <th>Host</th>
-		</tr>
-	  </thead>
-		  <tbody id="res_data_rendered" >
-	       <!--search results table goes here-->
-		   <!--tr  style="height:25px;" class="loading">
-		     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-		     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-		   </tr>
-		   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>
-		   <tr  style="height:25px;" class="loading"><td></td><td></td><td></td><td></td></tr>
-		   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>
-		   <tr  style="height:25px;" class="loading"><td></td><td></td><td></td><td></td></tr>
-		   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>
-		   <tr  style="height:25px;" class="loading"><td></td><td></td><td></td><td></td></tr>
-		   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>
-		   <tr  style="height:25px;" class="loading"><td></td><td></td><td></td><td></td></tr>
-		   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>
-		   <tr  style="height:25px;" class="loading"><td></td><td></td><td></td><td></td></tr>
-		   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>
-		   <tr  style="height:25px;" class="loading"><td></td><td></td><td></td><td></td></tr>
-		   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>
-		   <tr  style="height:25px;" class="loading"><td></td><td></td><td></td><td></td></tr>
-		   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr-->
-		   
-	      </tbody>
-	</table>
-    
-  </div>
-  <br/>
-  
-        <div class="inner center">
-		  <div id="container">
-			<div class="pagination">			
-				
-				<a href='#' class='page links' id="pagination-link" style="display:none;">Next >></a>
-				
+	<div id="main">      
+		
+		<br/>	
+	  <div class="inner center" id="search-form">  
+		  <form action="" method="get" onsubmit="event.preventDefault();do_search(this.q.value)" class="card table-caption" style="width:750px;padding:10px;margin-bottom:15px;">
+			<div class="search">
+			<input type="search" class="searchTerm" placeholder="Search..." id="q" name="q" value="" pattern=".{3,}" required title="3 characters minimum">
+			<input type="hidden" value="1" name="search">
+			<button type="submit" class="searchButton" ></button>
 			</div>
-		  </div>
-	    </div>
-
-              
-</div>
+		  </form> 
+	  </div>  
+	  
+	 <div class="inner center loader" id="search-query-caption-container"> <br/><br/><br/><br/><br/><br/>      
+		  <b class="table-caption" id="search-query-caption"></b>
+	 </div>
+	 <!--
+	Searching for "<span id="search-query"><span>"...
+	Search: "" [<span id="result-count"></span> Results]
+	-->
+	 <div class="inner center loader" id="progressbar-loader">	  
+			<div class="progressbar1">
+			  <div class="progressbarfill"></div>
+			</div>	  
+	 </div> 
+	 
+	  <div class="inner center" id="search_res_table" style="display:none;">
+		<table class="rtable">
+		  <caption class="table-caption" id="search-table-caption"></caption>
+		  <thead>
+			<tr  >
+			  <th>File Name</th>		  
+			  <th>Size</td>
+			  <th>Category</th>
+			  <th>Host</th>
+			</tr>
+		  </thead>
+			  <tbody id="res_data_rendered" >
+			   <!--search results table goes here-->
+			   <tr  style="height:25px;" class="loading">
+				 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			   </tr>
+			   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>
+			   <tr  style="height:25px;" class="loading"><td></td><td></td><td></td><td></td></tr>
+			   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>
+			   <tr  style="height:25px;" class="loading"><td></td><td></td><td></td><td></td></tr>
+			   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>
+			   <tr  style="height:25px;" class="loading"><td></td><td></td><td></td><td></td></tr>
+			   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>
+			   <tr  style="height:25px;" class="loading"><td></td><td></td><td></td><td></td></tr>
+			   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>
+			   <tr  style="height:25px;" class="loading"><td></td><td></td><td></td><td></td></tr>
+			   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>
+			   <tr  style="height:25px;" class="loading"><td></td><td></td><td></td><td></td></tr>
+			   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>
+			   <tr  style="height:25px;" class="loading"><td></td><td></td><td></td><td></td></tr>
+			   <tr  style="height:15px;"><td></td><td></td><td></td><td></td></tr>		   
+			  </tbody>
+		</table>    
+	  </div>
+	  <br/>
+	  
+			<div class="inner center">
+			  <div id="container">
+				<div class="pagination">				
+					<a href='#' class='page links' id="pagination-link" style="display:none;" data-link>Next >></a>				
+				</div>
+			  </div>
+			</div>				  
+	</div>
 
 <!--individual file info views start-->
-
 <div class="inner center" id="file" style="display:none;">
   
     <div id="detailsouterframe">
@@ -135,27 +125,22 @@
 	<div id="title"></div>
 
     <div id="details">
-        <dl class="col1">
+        <dl class="col1">		
 		
-		
-		<dt>Size:</dt>
-		<dd id="size"></dd>
-        
-		<dt>Extension:</dt>
-		<dd id="ext"></dd>
-		
-		<dt>Category:</dt>
-        <dd id="cat"></dd>
-        
-        <dt>Tags:</dt>
-        <dd id="tag-links"></dd>
+			<dt>Size:</dt>
+			<dd id="size"></dd>
+			
+			<dt>Extension:</dt>
+			<dd id="ext"></dd>
+			
+			<dt>Category:</dt>
+			<dd id="cat"></dd>
+			
+			<dt>Tags:</dt>
+			<dd id="tag-links"></dd>
 
-
-		
-
-
-		<!--dt>Language(s):</dt>
-		<dd>English</dd-->        
+			<!--dt>Language(s):</dt>
+			<dd>English</dd-->        
                 
         </dl>
 		
@@ -164,13 +149,10 @@
 			
 			<!--will be added soon-->
             <!--dt>Shared By:</dt>
-            <dd>{{file_owner}}</dd-->
-			
-			
+            <dd>{{file_owner}}</dd-->			
 			
 			<dt>File Host:</dt>
-		    <dd id="host"></dd>
-            
+		    <dd id="host"></dd>            
 			<!--br/><br/><br/-->
         </dl>
 		
@@ -184,35 +166,29 @@
 		
        <br><br>
 	   <div id="social">
-	   <div style="float:right;"><div class="addthis_inline_share_toolbox"></div></div><br/><br/>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-610bf8450879de02"></script>
-
-
+	      <div style="float:right;"><div class="addthis_inline_share_toolbox"></div></div><br/><br/>
        </div>
        
 	   <br/><br/>
-	   <div>
-	   
+	   <div>	   
 			<div class="download center">
                 <!--Don't remove "dl_link" and "data-src" from below link, search SDK required this.-->			
 				<a href="#" class="buttonDownload" rel="nofollow" target="_blank" id="dl_link" data-src="">Download</a>
+			</div>		
+		
+			<!--will be added soon-->
+			<div class="nfo" >
+				<pre id="desc"></pre>
 			</div>
 		
+			<!--div class="descriptions" id="desc-div">
+				<pre ></pre>
+			</div-->
 		
-		<!--will be added soon-->
-        <div class="nfo" >
-            <pre id="desc"></pre>
-        </div>
-		
-		<!--div class="descriptions" id="desc-div">
-            <pre ></pre>
-        </div-->
-		
-        <br>
+            <br>
             <div id="comments"></div>            
             <div class="center"><!--paste bottom ad code here-->
-<img class="card" src="//storage.googleapis.com/boysofts.appspot.com/file-search-engine/sample_ads/320x50.png" /></div>            
-                       
+            <img class="card" src="//storage.googleapis.com/boysofts.appspot.com/file-search-engine/sample_ads/320x50.png" /></div>                        
 		 </div>
         </div>
     </div>
@@ -234,11 +210,7 @@
 		  <th>Host</th>
 		</tr>
 	  </thead>
-		  <tbody id="related-files-data">
-			
-		
-	  </tbody>
-	  
+		  <tbody id="related-files-data"></tbody>	  
 	</table>
 
   </div>
@@ -256,11 +228,7 @@
 		  <th>Host</th>
 		</tr>
 	  </thead>
-		  <tbody id="recent-files-data">
-			
-		
-	  </tbody>
-	  
+		  <tbody id="recent-files-data"></tbody>	  
 	</table>
 
   </div> 
@@ -276,44 +244,11 @@
 		</div>
 	</div>
 </div>
-<script>
-function open_modal(elm) {
-  document.getElementById("modal_title").innerHTML = elm + ':';
-  
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-     response = this.responseText;	 
-	 document.getElementById("modal_body").innerHTML = response;
-    }
-  };
-  xhttp.open("GET", site_url + "texts/" + elm + ".txt", true);
-  xhttp.send();
-}
-</script>
-<!--modal end-->
+
 
 <!--scroll to top -->
 <button onclick="topFunction()" id="scrollToTop" title="Go to top">&#8682;</button>
-<script>
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("scrollToTop").style.display = "block";
-  } else {
-    document.getElementById("scrollToTop").style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-</script>
-<!--scroll to top end -->
 
 <footer class="footer">
   <div class="footer__addr">
@@ -461,30 +396,16 @@ function topFunction() {
 </body>
 </html>
 
-<script src="//file-search-engine.1111110.xyz/fileSearchApiLib.js"></script>
-<!--script src="//localhost:81/fileSearchApiLib-V1.js"></script-->
+
 
 <script>
-var fileid, gid;
-var page_no = 0;
+function getQueryStringValue1 (key) {  
+  return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+}
 
-var site_url = 'https://www.1111110.xyz/';
-
-var base_file_download_url = "https://files.1111110.xyz/api/file.php";
-var total_pages_count_api_url = 'https://file-search-engine.1111110.xyz/api/total-pages-count.json';
-var file_store_base_url = 'https://file-store.1111110.xyz/file/imtiaj/file-search-engine-json/';
-
-document.getElementById("logo").href = site_url + '#';
-
-var category_arr = {'0':'Movie/Videos','1':'Music/Audios','2':'eBook/Documents','3':'Photo/Images','4':'Software/Applications', '5':'Archive/Files'};
-
-// To trigger the event Listener
-document.addEventListener('search_finished', (e)=>{
-      search_data = e.detail.data;
-      render_search_results(search_data);
-});
-
-var t0 = performance.now();
+function getQueryStringValuefromString1 (str, key) {  
+  return decodeURIComponent(str.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+}
 
 function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
@@ -541,6 +462,22 @@ function get_file_name(url){
    return url.split("/").pop()
 }
 
+function get_local_storage(url){
+	file_name = get_file_name(url);
+    hid = hashCode(file_name);
+	if($store_data = localStorage.getItem(hid)) {
+		return $store_data;
+    }
+	else{ return false; }
+}
+
+function set_local_storage(url, res_data){
+	file_name = get_file_name(url); //key is an url
+	hid = hashCode(file_name);
+	localStorage.setItem(hid, res_data);
+}
+
+
 function scrollToFile() {
   //document.getElementById("main").scrollIntoView();
   document.documentElement.scrollTop = 0;
@@ -554,37 +491,128 @@ function attachLinksToScroll(){
 	}
 }
 
-function do_search() {
-  query_val = document.getElementById("q").value;
-  var search_url = site_url + '#search?q='+ query_val;
+
+function hide_page_loader(){			
+	try{
+		loaders = document.getElementsByClassName("loader");
+		for(var i=0; i<loaders.length; i++) {
+			loaders[i].style.display = 'none';
+		}
+		//document.getElementById("search_res_table").style.display = '';                
+	}
+	catch(err) {}
+}
+
+function update_page_loader_caption(html){
+	document.getElementById("search-query-caption-container").style.display = '';	
+	document.getElementById("search-query-caption").innerHTML = html;	
+}
+</script>
+
+<script>
+function open_modal(elm) {
+  document.getElementById("modal_title").innerHTML = elm + ':';
   
-  window.location = search_url;
-  return false;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     response = this.responseText;	 
+	 document.getElementById("modal_body").innerHTML = response;
+    }
+  };
+  xhttp.open("GET", site_url + "/texts/" + elm + ".txt", true);
+  xhttp.send();
+}
+</script>
+<!--modal end-->
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("scrollToTop").style.display = "block";
+  } else {
+    document.getElementById("scrollToTop").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+<!--scroll to top end -->
+
+<!-- Cloudflare Web Analytics -->
+<!--script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4177784b9610406ea343658c1871a005"}'></script-->
+<!-- End Cloudflare Web Analytics -->
+<script>
+var fileid, gid;
+var page_no = 0;
+//var site_url = location.protocol + '//' + location.host + location.pathname; //'https://www.1111110.xyz/';
+var site_url = 'https://github.111110.xyz/';
+//setCookie1('site_url', site_url, 1); //in php it is set by php scipt
+var base_file_download_url = "https://files.1111110.xyz/api/file.php";
+var total_pages_count_api_url = 'https://file-search-engine.1111110.xyz/api/total-pages-count.json';
+var file_store_base_url = 'https://file-store.1111110.xyz/file/imtiaj/file-search-engine-json/';
+
+document.getElementById("logo").href = site_url;// + '#';
+//document.getElementById("logo").setAttribute('data-link', '');
+
+
+var category_arr = {'0':'Movie/Videos','1':'Music/Audios','2':'eBook/Documents','3':'Photo/Images','4':'Software/Applications', '5':'Archive/Files'};
+
+// To trigger the event Listener
+document.addEventListener('search_finished', (e)=>{
+      search_data = e.detail.data;
+      render_search_results(search_data);
+});
+
+var t0 = performance.now();
+
+function do_search(query_value) {
+	//var search_url = site_url + '#search?q='+ query_value;
+	var search_url = '#search?q='+ query_value;
+	
+	update_page_loader_caption('Loading Search for: '+ query_value);
+	document.getElementById("progressbar-loader").style.display = '';
+	//hide file info, related files list, or previous list page	
+	document.getElementById("file").style.display = 'none';
+	document.getElementById("related-files").style.display = 'none';
+	document.getElementById("search_res_table").style.display = 'none';
+	document.getElementById("q").value = query_value;
+	
+    //window.location = search_url;
+    //window.location.hash = search_url;
+	console.log('Search view: query=' + query_value);
+	search_init(query_value);
+    return false;	
 }
 
 function fetchDoc(url, action) {
   const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    file_name = get_file_name(url);
+  xhttp.onload = function() {    
 	res_data = xhttp.responseText;
-	//set local storage value
-	localStorage.setItem(hashCode(file_name), res_data);	
     render_actions(action, res_data);
+	//set local storage value
+	set_local_storage(url, res_data);
   }
   xhttp.open("GET", url);
   xhttp.send();
 }
 
-function loadDoc(url, action) {
-  file_name = get_file_name(url);
-  hid = hashCode(file_name);
-  if($store_data = localStorage.getItem(hid)) {
+function loadDoc(url, action) {  
+  if( $store_data = get_local_storage(url) ) {
     render_actions(action, $store_data);      
 	}
   else{
     fetchDoc(url, action);
   }  
 }
+
 
 function render_actions(action, data){
     if(action == 'list'){
@@ -601,43 +629,58 @@ function render_actions(action, data){
 function read_total_pages(res_data){
   json_data = JSON.parse(res_data);
   total_pages = json_data['count'];
-
+  
   loadDoc(file_store_base_url + total_pages + '.json', 'list');
-  document.getElementById("pagination-link").href = site_url + 'page/' + ( parseInt(total_pages) - 1) + '.html';
+  document.getElementById("pagination-link").href = site_url + '?page=' + ( parseInt(total_pages) - 1);
+  document.title = 'Best File Search Engine | Free Download - Home';
+  hide_page_loader(); //function defined in sdk
 }
 
 
-
-
 //router handler
-function file_handler(match){
-	title = match[1]
-	gid = match[2]
-	fileid = match[3]
-	console.log(title)
-	
+function file_handler(title, gid, fileid){	
+	update_page_loader_caption(title);
 	loadDoc(file_store_base_url + gid + '.json', 'page');
 	document.getElementById("pagination-link").style.display = 'none';
 }
 
-function page_handler(match){
-	if(match){
-	  page_no = match[1]
-	}
-	
+function page_handler(page_no){	
 	if(page_no == 0){
-		loadDoc(total_pages_count_api_url, 'total_pages');
-		document.getElementById("pagination-link").style.display = '';
+		//home page
+		loadDoc(total_pages_count_api_url, 'total_pages');	
 	}
 	else if (page_no.length > 0){
+	   //next pages
 	   loadDoc(file_store_base_url + page_no + '.json', 'list');
-	   document.getElementById("pagination-link").href = site_url + 'page/' + ( parseInt(page_no) - 1) + '.html';
-	   
-	   document.getElementById("pagination-link").style.display = '';
+	   document.getElementById("pagination-link").href = site_url + '?page=' + ( parseInt(page_no) - 1);
 	}
-	console.log(page_no)
+	
+	document.getElementById("pagination-link").style.display = '';
 }
 
+function match_path(){
+	var title = getQueryStringValue1('title');
+	fileid    = getQueryStringValue1('fileid');
+	gid       = getQueryStringValue1('gid');
+	var page  = getQueryStringValue1('page');
+	console.log(page);
+	//return;
+	if(gid && fileid ){
+		file_handler(title, gid, fileid)
+		console.log('Individual file view: gid id=' + gid + ', & fileid=' + fileid)
+	}
+	else if(page){
+		update_page_loader_caption('Loading Page No: '+ page);
+		page_handler(page)
+		console.log('Pages view: Page no=' + page)
+		document.title = 'File search Page no: ' + page;
+	}
+	else{
+		update_page_loader_caption('Loading Home Page.');
+		page_handler('0');		
+		console.log('Home page view.')
+	}
+}
 
 /*router*/
 const navigateTo = url => {
@@ -646,19 +689,9 @@ const navigateTo = url => {
 };
 
 const router = async () => {
+	//router path match code goes here.
+	match_path();
 	
-if(match = location.pathname.match(/.*\/file\/(.*?)-gid-(.*?)-fileid-(.*?)\.html?$/) ){
-	file_handler(match)
-}
-else if(match = location.pathname.match(/.*\/page\/(\d+)\.html?$/) ){
-	page_handler(match)
-	
-}
-else{
-	page_handler(false)
-}
-	//document.querySelector("#app").innerHTML = location.pathname;
-	//console.log(location.pathname);
 };
 
 window.addEventListener("popstate", router);
@@ -667,7 +700,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.addEventListener("click", e => {
         if (e.target.matches("[data-link]")) {
             e.preventDefault();
-            navigateTo(e.target.href);
+            navigateTo(e.target.href);			
         }
     });
 
@@ -680,14 +713,14 @@ function routerControler() {
 	
 	if (theHash.indexOf('search') == 1 ) {
 	   //console.log(theHash);
-	   //query_val = getQueryStringValuefromString1(theHash, 'q'); 
-	   query_val = document.getElementById("q").value = query_val;
+	   query_val = getQueryStringValuefromString1(theHash, 'q');
+	   //query_val = document.getElementById("q").value = query_val;
 	   search_init(query_val);
 	}    
 }
 
 window.addEventListener("hashchange", function() {
-	  //console.log("hashchange event");
+	  console.log("Site hashchange to: " + window.location.hash);
 	  routerControler();
 	});
 </script>
@@ -773,14 +806,11 @@ var render_file_description = function(res_data){
 	  site_url = decodeURIComponent(site_url);
 	  related_items_tbl_tmpl = related_items_tbl_tmpl + `
 	  <tr>
-			  <td><a href="${site_url}file/${sluz}-gid-${gid}-fileid-${fid}.html" class="links" data-link>${title}</a></td>
+			  <td><a href="${site_url}?title=${sluz}&gid=${gid}&fileid=${fid}" class="links" data-link>${title}</a></td>
 			  <td>${size}</td>
 			  <td>${category}</td>
 			  <td>${domain}</td>
-			</tr>`;
-	
-	
-	
+			</tr>`;	
 	}
 	//gen description
 	shuffle(related_items)
@@ -792,21 +822,17 @@ var render_file_description = function(res_data){
 	desc_txt = desc_txt.split(' ')
 	desc_txt = array_unique(desc_txt)
 	desc_txt = desc_txt.join(' ')
-	console.log(desc_txt);	
+	//console.log(desc_txt);	
 	//document.getElementById("desc-div").style.display = '';
-	document.getElementById("desc").innerHTML = desc_txt;
-	
-	
+	document.getElementById("desc").innerHTML = desc_txt;	
 	
 	document.getElementById("related-files-data").innerHTML = related_items_tbl_tmpl;
-	document.getElementById("related-files").style.display = '';
-	
-	
+	document.getElementById("related-files").style.display = '';	
 	
 	attachLinksToScroll();
 	tags2links('tag');
-	
-	}
+    hide_page_loader();	
+}
 	
 	
 var render_search_results = function(res_data){
@@ -830,14 +856,14 @@ var render_search_results = function(res_data){
 	  site_url = decodeURIComponent(site_url);
 	  search_tbl_tmpl = search_tbl_tmpl + `
 	  <tr>
-			  <td><a href="${site_url}file/${sluz}-gid-${gid}-fileid-${fid}.html" class="links" data-link>${title}</a></td>
+			  <td><a href="${site_url}?title=${sluz}&gid=${gid}&fileid=${fid}" class="links" data-link>${title}</a></td>
 			  <td>${size}</td>
 			  <td>${category}</td>
 			  <td>${domain}</td>
 			</tr>`;
 	}
 
-	document.getElementById("result-count").innerHTML = json_data.length;
+	document.getElementById("search-table-caption").innerHTML = 'Page no: ' + gid + ', Total Results: ' + json_data.length + '.';
 
 	document.getElementById("res_data_rendered").innerHTML = search_tbl_tmpl;
 	document.getElementById("search_res_table").style.display = '';
@@ -853,6 +879,7 @@ var render_search_results = function(res_data){
 	document.getElementById("file").style.display = 'none';
 	
 	attachLinksToScroll();
+	hide_page_loader();
 	
 
 	//now send data to server to insert in mysql db
@@ -867,9 +894,18 @@ function tags2links(el){
 	for (i = 0; i < tags.length; i++) {
 	  tag = tags[i].innerHTML;
 	  tag = tag.trim();
-	  tags[i].innerHTML = `<a href="${site_url}#search?q=${tag}&search=1">${tag}</a>`;
+	  tags[i].innerHTML = `<a href="${site_url}#search?q=${tag}">${tag}</a>`;
+	  tags[i].setAttribute('onclick' , `event.preventDefault();do_search('${tag}');`);
+	  
 	}
 }
 
 tags2links('tag');
 </script>
+
+<!--addthis-->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-610bf8450879de02"></script>
+
+<!--script src="//storage.googleapis.com/boysofts.appspot.com/file-search-engine/fileSearchApiLib-V1.js"></script-->
+<!--script src="//localhost:81/fileSearchApiLib-V1.js"></script-->
+<!--script src="fileSearchApiLib-V1.js"></script-->
